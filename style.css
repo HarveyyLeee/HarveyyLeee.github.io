@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+.container {
+    background-image: linear-gradient(#c33764,#1d2671);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+}
+.bot {
+    flex-grow: 1.5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#ig {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+}
+#fb {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+}
+#add {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 900;
+}
+#pointer {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 900;
+    animation: blinks 1s linear infinite;
+}
+@keyframes blinks {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+img {
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    border: 2px solid cyan;
+}
+span {
+    font-size: 35px;
+}
+#greet {
+    color: transparent;
+    font-size: 45px;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+#greet::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: cyan;
+    -webkit-text-stroke: 0vw #c33764;
+    border-right: 2.5px solid cyan;
+    overflow: hidden;
+    animation: animate 2.5s linear infinite;
+}
+@keyframes animate {
+    0%,10%,100% {
+        width: 0;
+    }
+    70%,90% {
+        width: 100%;
+    }
+}
